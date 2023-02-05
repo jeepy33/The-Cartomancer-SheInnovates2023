@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/items/major-arcana/major_spread.png" type="Texture" id=1]
+[ext_resource path="res://Assets/items/major-arcana/health.png" type="Texture" id=2]
+
+[node name="PlayUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Major-Arcana" type="Sprite" parent="."]
+position = Vector2( -319, -142 )
+texture = ExtResource( 1 )
+hframes = 13
+
+[node name="Damage" type="Sprite" parent="Major-Arcana"]
+visible = false
+texture = ExtResource( 2 )
+hframes = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 162.0
+margin_bottom = 44.0

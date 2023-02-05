@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/501102__evretro__8-bit-footsteps.mp3-a4c77480a9d5ef8abe8e390d5e76180c.mp3str"
+
+[deps]
+
+source_file="res://Assets/audio/sound_effects/501102__evretro__8-bit-footsteps.mp3"
+dest_files=[ "res://.import/501102__evretro__8-bit-footsteps.mp3-a4c77480a9d5ef8abe8e390d5e76180c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

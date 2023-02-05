@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/170163__timgormly__8-bit-jump1.mp3-3cc60fa0c361e53edfa1d25406b299e3.mp3str"
+
+[deps]
+
+source_file="res://Assets/audio/sound_effects/170163__timgormly__8-bit-jump1.mp3"
+dest_files=[ "res://.import/170163__timgormly__8-bit-jump1.mp3-3cc60fa0c361e53edfa1d25406b299e3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

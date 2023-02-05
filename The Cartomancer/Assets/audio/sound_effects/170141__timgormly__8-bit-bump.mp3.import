@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/170141__timgormly__8-bit-bump.mp3-f390f248ad5d93d9ee4c71cedd2e60c5.mp3str"
+
+[deps]
+
+source_file="res://Assets/audio/sound_effects/170141__timgormly__8-bit-bump.mp3"
+dest_files=[ "res://.import/170141__timgormly__8-bit-bump.mp3-f390f248ad5d93d9ee4c71cedd2e60c5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

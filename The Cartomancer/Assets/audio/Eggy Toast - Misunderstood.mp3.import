@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Eggy Toast - Misunderstood.mp3-b2dac78a8bb43905a909648ec81dec07.mp3str"
+
+[deps]
+
+source_file="res://Assets/audio/Eggy Toast - Misunderstood.mp3"
+dest_files=[ "res://.import/Eggy Toast - Misunderstood.mp3-b2dac78a8bb43905a909648ec81dec07.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

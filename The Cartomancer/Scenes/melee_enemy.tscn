@@ -1,0 +1,199 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Assets/enemies/melee_enemies/blob1_idle.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/blob.gd" type="Script" id=2]
+[ext_resource path="res://Assets/audio/sound_effects/170141__timgormly__8-bit-bump.mp3" type="AudioStream" id=3]
+
+[sub_resource type="Shader" id=6]
+code = "shader_type canvas_item;
+
+uniform vec4 flash_color : hint_color = vec4(1.0);
+uniform float flash_modifier : hint_range(0.0,1.0) = 0.0;
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	color.rgb = mix(color.rgb, flash_color.rgb, flash_modifier);
+	COLOR = color;
+	
+}"
+
+[sub_resource type="ShaderMaterial" id=7]
+resource_local_to_scene = true
+shader = SubResource( 6 )
+shader_param/flash_color = Color( 1, 1, 1, 1 )
+shader_param/flash_modifier = 1.0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 26.5, 17 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 15, 14 )
+
+[sub_resource type="Animation" id=8]
+resource_name = "Damage"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/flash_modifier")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.143213, 0.196376, 0.238688, 0.253878, 0.384071, 0.398176 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "Hop"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.0531624, 0.800691, 1.09797 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.0564173, 0.0716065, 0.803946, 0.819135, 1.09873 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 0.7 ), Vector2( 1, 0.7 ), Vector2( 0.8, 1.25 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.0564173, 0.0716065, 0.803946, 0.819135, 1.09873 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 6 ), Vector2( 0, 6 ), Vector2( 0, -5 ), Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:material:shader_param/flash_modifier")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:material:shader_param/flash_modifier")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
+[sub_resource type="RectangleShape2D" id=4]
+
+[sub_resource type="CircleShape2D" id=9]
+radius = 278.002
+
+[node name="Blob" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 7 )
+texture = ExtResource( 1 )
+hframes = 4
+
+[node name="Area2D" type="Area2D" parent="Sprite" groups=["ehurtbox"]]
+
+[node name="Hurtbox" type="CollisionShape2D" parent="Sprite/Area2D" groups=["hurtbox"]]
+position = Vector2( 2.5, 6 )
+shape = SubResource( 3 )
+
+[node name="Area2D2" type="Area2D" parent="Sprite" groups=["hitbox"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Area2D2"]
+position = Vector2( 0, 7 )
+shape = SubResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Damage = SubResource( 8 )
+anims/Hop = SubResource( 1 )
+anims/RESET = SubResource( 2 )
+
+[node name="Collision" type="CollisionShape2D" parent="." groups=["hitbox"]]
+position = Vector2( 0, 7 )
+shape = SubResource( 4 )
+
+[node name="alert" type="Area2D" parent="."]
+collision_layer = 0
+monitorable = false
+
+[node name="radius" type="CollisionShape2D" parent="alert"]
+shape = SubResource( 9 )
+
+[node name="BlobAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[connection signal="area_entered" from="Sprite/Area2D2" to="." method="_on_Area2D2_area_entered"]
+[connection signal="area_entered" from="alert" to="." method="_on_alert_area_entered"]
+[connection signal="area_exited" from="alert" to="." method="_on_alert_area_exited"]
+[connection signal="body_entered" from="alert" to="." method="_on_alert_body_entered"]
+[connection signal="body_exited" from="alert" to="." method="_on_alert_body_exited"]

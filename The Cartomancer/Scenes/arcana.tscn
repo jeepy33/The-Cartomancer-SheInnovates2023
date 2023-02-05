@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/items/minor-arcana/minor (1).png" type="Texture" id=1]
+[ext_resource path="res://Scripts/arcana.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 20, 32 )
+
+[node name="Sprite" type="Sprite"]
+texture = ExtResource( 1 )
+hframes = 4
+script = ExtResource( 2 )
+
+[node name="collect" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collect"]
+shape = SubResource( 1 )
+
+[connection signal="area_entered" from="collect" to="." method="_on_collect_area_entered"]

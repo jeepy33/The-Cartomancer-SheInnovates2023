@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/270315__littlerobotsoundfactory__menu_navigate_03.mp3-373445a8a66e4a13a23d5fec1b8c4066.mp3str"
+
+[deps]
+
+source_file="res://Assets/audio/sound_effects/270315__littlerobotsoundfactory__menu_navigate_03.mp3"
+dest_files=[ "res://.import/270315__littlerobotsoundfactory__menu_navigate_03.mp3-373445a8a66e4a13a23d5fec1b8c4066.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

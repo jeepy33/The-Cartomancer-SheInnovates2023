@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/270329__littlerobotsoundfactory__jingle_lose_00.mp3-0047f6d73d74226b74da9547e73bfc0a.mp3str"
+
+[deps]
+
+source_file="res://Assets/audio/sound_effects/270329__littlerobotsoundfactory__jingle_lose_00.mp3"
+dest_files=[ "res://.import/270329__littlerobotsoundfactory__jingle_lose_00.mp3-0047f6d73d74226b74da9547e73bfc0a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

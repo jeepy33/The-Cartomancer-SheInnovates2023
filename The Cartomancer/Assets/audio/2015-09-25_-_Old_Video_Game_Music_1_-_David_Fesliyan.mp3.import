@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/2015-09-25_-_Old_Video_Game_Music_1_-_David_Fesliyan.mp3-20e9f13f26113092e40d138a1338d878.mp3str"
+
+[deps]
+
+source_file="res://Assets/audio/2015-09-25_-_Old_Video_Game_Music_1_-_David_Fesliyan.mp3"
+dest_files=[ "res://.import/2015-09-25_-_Old_Video_Game_Music_1_-_David_Fesliyan.mp3-20e9f13f26113092e40d138a1338d878.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

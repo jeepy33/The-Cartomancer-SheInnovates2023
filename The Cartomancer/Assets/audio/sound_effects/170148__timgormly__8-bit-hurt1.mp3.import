@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/170148__timgormly__8-bit-hurt1.mp3-6576fb0afe8ce2cd4effb52897ccc7d9.mp3str"
+
+[deps]
+
+source_file="res://Assets/audio/sound_effects/170148__timgormly__8-bit-hurt1.mp3"
+dest_files=[ "res://.import/170148__timgormly__8-bit-hurt1.mp3-6576fb0afe8ce2cd4effb52897ccc7d9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
